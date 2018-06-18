@@ -6,11 +6,14 @@
 
 //处理...
 /**
-* 
+*
 */
-class Bus 
+class Bus
 {
+  function test(){
     
+  }
+
     function __construct($preurl,$type,$tailurl)
     {
          $this->valid_type =array('GetStationLicense','GetLines','GetLineById','GetSiteLines','location/ip','GetDistance','GetSites');
@@ -19,7 +22,7 @@ class Bus
          $this->preurl = $preurl;
          $this->tailurl = $tailurl;
          $result = array();
- 
+
          //检查是否正确
          if($this->check_url()){
             $result['data'] = $this->post_way($this->get_total_url());
@@ -36,7 +39,7 @@ class Bus
     function post_way($url){
 
         $data = file_get_contents($url);//目的页面内容获取
-        
+
         return $data;
     }
 
@@ -96,7 +99,7 @@ switch(@$_GET['type']){
         $type = 'GetSites';
         $tail_url = 'siteName='.$_GET['siteName'];
         break;
-        
+
     default:
         break;
 }
