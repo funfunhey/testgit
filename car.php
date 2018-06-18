@@ -10,10 +10,9 @@
 */
 class Bus
 {
-  function test(){
-    
-  }
-
+    function abc(){
+      echo "hello";
+    }
     function __construct($preurl,$type,$tailurl)
     {
          $this->valid_type =array('GetStationLicense','GetLines','GetLineById','GetSiteLines','location/ip','GetDistance','GetSites');
